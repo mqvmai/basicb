@@ -96,7 +96,7 @@ function clearSearch() {
   <div class="min-h-screen bg-gray-50">
     <header class="bg-white border-b border-gray-100 px-6 py-4 flex items-center gap-3">
       <button @click="clearSearch" class="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
-        TourSpot
+        BasicB
       </button>
       <span class="text-xs text-gray-400 font-mono">ranked by real reviews</span>
     </header>
@@ -104,7 +104,7 @@ function clearSearch() {
     <main class="max-w-5xl mx-auto px-6 py-10">
       <div :class="['mb-10', city ? '' : 'text-center']">
         <template v-if="!city">
-          <h1 class="text-3xl font-bold text-gray-900 mb-2">Find what's worth visiting</h1>
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Find where everyone's going</h1>
           <p class="text-gray-500 mb-6">Ranked by review volume, not paid placement</p>
         </template>
 

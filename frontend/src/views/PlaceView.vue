@@ -50,7 +50,7 @@ onUnmounted(() => mapInstance?.remove());
   <div class="min-h-screen bg-gray-50">
     <header class="bg-white border-b border-gray-100 px-6 py-4 flex items-center gap-3">
       <button @click="router.back()" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">← Back</button>
-      <span class="text-xl font-bold text-gray-900">TourSpot</span>
+      <span class="text-xl font-bold text-gray-900">BasicB</span>
     </header>
 
     <div v-if="loading" class="text-center py-16 text-gray-400 text-sm">Loading...</div>
