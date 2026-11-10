@@ -1,5 +1,5 @@
 import { Redis } from "ioredis";
-import { getPlaces, getPlace } from "./mockData.js";
+import { fetchPlaces, fetchPlace, fetchAutocomplete } from "./googlePlaces.js";
 
 const redis = new Redis({
   host: "localhost",
@@ -10,7 +10,7 @@ const redis = new Redis({
 });
 redis.connect().catch(() => console.warn("Redis unavailable — caching disabled"));
 
-const CACHE_TTL = 60 * 10;
+const CACHE_TTL = 60 * 60; // 1 hour (Places API data is stable)
 
 export const resolvers = {
   Query: {
@@ -22,7 +22,7 @@ export const resolvers = {
         if (cached) return JSON.parse(cached);
       } catch {}
 
-      const results = getPlaces(city, category);
+      const results = await fetchPlaces(city, category);
 
       try {
         await redis.setex(cacheKey, CACHE_TTL, JSON.stringify(results));
@@ -39,7 +39,7 @@ export const resolvers = {
         if (cached) return JSON.parse(cached);
       } catch {}
 
-      const result = getPlace(id);
+      const result = await fetchPlace(id);
       if (!result) return null;
 
       try {
@@ -47,6 +47,11 @@ export const resolvers = {
       } catch {}
 
       return result;
+    },
+
+    autocomplete: async (_: unknown, { input }: { input: string }) => {
+      if (input.length < 2) return [];
+      return fetchAutocomplete(input);
     },
   },
 };

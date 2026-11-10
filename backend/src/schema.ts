@@ -15,5 +15,6 @@ export const typeDefs = `#graphql
   type Query {
     places(city: String!, category: String): [Place!]!
     place(id: ID!): Place
+    autocomplete(input: String!): [String!]!
   }
 `;

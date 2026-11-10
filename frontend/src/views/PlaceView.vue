@@ -48,9 +48,10 @@ onUnmounted(() => mapInstance?.remove());
 
 <template>
   <div class="min-h-screen bg-gray-50">
-    <header class="bg-white border-b border-gray-100 px-6 py-4 flex items-center gap-3">
-      <button @click="router.back()" class="text-sm text-gray-500 hover:text-gray-900 transition-colors">← Back</button>
-      <span class="text-xl font-bold text-gray-900">BasicB</span>
+    <header class="bg-gray-900 px-6 py-4 flex items-center gap-4 sticky top-0 z-40">
+      <button @click="router.back()" class="text-sm text-gray-400 hover:text-white transition-colors">← Back</button>
+      <span class="font-bold text-white text-lg tracking-tight">BasicB</span>
+      <span v-if="place" class="text-gray-500 text-sm font-mono truncate">/ {{ place.name }}</span>
     </header>
 
     <div v-if="loading" class="text-center py-16 text-gray-400 text-sm">Loading...</div>

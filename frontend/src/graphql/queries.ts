@@ -15,6 +15,12 @@ export const PLACES_QUERY = `
   }
 `;
 
+export const AUTOCOMPLETE_QUERY = `
+  query Autocomplete($input: String!) {
+    autocomplete(input: $input)
+  }
+`;
+
 export const PLACE_QUERY = `
   query Place($id: ID!) {
     place(id: $id) {

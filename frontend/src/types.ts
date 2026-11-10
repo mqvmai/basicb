@@ -28,19 +28,3 @@ export const FEATURED_CITIES = [
   { name: "Las Vegas",      imageUrl: "https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?w=600&h=400&fit=crop" },
 ];
 
-export const POPULAR_CITIES = [
-  "Abu Dhabi", "Amsterdam", "Atlanta", "Austin", "Bangkok",
-  "Barcelona", "Berlin", "Boston", "Brussels", "Buenos Aires",
-  "Cairo", "Calgary", "Cape Town", "Chicago", "Copenhagen",
-  "Dallas", "Denver", "Detroit", "Dubai", "Dublin",
-  "Edinburgh", "Florence", "Frankfurt", "Geneva", "Houston",
-  "Istanbul", "Jakarta", "Las Vegas", "Lisbon", "London",
-  "Los Angeles", "Madrid", "Melbourne", "Mexico City", "Miami",
-  "Milan", "Minneapolis", "Montreal", "Moscow", "Mumbai",
-  "Munich", "Nashville", "New Orleans", "New York", "Oslo",
-  "Paris", "Philadelphia", "Phoenix", "Portland", "Prague",
-  "Rome", "San Diego", "San Francisco", "Santiago", "São Paulo",
-  "Seattle", "Seoul", "Shanghai", "Singapore", "Stockholm",
-  "Sydney", "Taipei", "Tokyo", "Toronto", "Vancouver",
-  "Vienna", "Warsaw", "Washington DC", "Zürich",
-];
