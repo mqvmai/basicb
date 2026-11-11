@@ -1,5 +1,14 @@
-# Vue 3 + TypeScript + Vite
+# BasicB — Frontend
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3 + TypeScript + Vite frontend for BasicB.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+See the [root README](../README.md) for full setup instructions, architecture diagram, and API docs.
+
+## Dev
+
+```bash
+npm install
+npm run dev   # http://localhost:5173
+```
+
+Requires the backend running at `http://localhost:4000`.
